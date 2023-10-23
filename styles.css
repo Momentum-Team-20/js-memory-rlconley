@@ -1,3 +1,8 @@
 * {
     background-color: aqua;
 }
+
+.card {
+    width: 25%;
+    height: auto;
+}
