@@ -1,1 +1,2 @@
 TODO: Make the game mobil friendly
+Add radomization

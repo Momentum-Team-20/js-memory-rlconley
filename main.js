@@ -10,7 +10,7 @@ function flipCard (cards) {
         card.addEventListener('click', (event) => {
             console.log("clicked!")
             console.log(card.src)
-            card.src = "https://images.pexels.com/photos/706194/pexels-photo-706194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+            card.src = card.dataset.cardFront;
             console.log(card.src)
         }
         )
