@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
     <title>Memory Game</title>
 </head>
 
-<body>
+<body class="has-background-success">
     <header>
-        <h1>Memory Game</h1>
+        <h1 class="is-size-2">Memory Game</h1>
     </header>
     <ol id="menu">
         <li class="menuOptions" value=1>Instructions</li>
@@ -19,7 +20,7 @@
         <li class="menuOptions" value=3>End the Game</li>
 
     </ol>
-    <div id="cardContainer">
+    <div id="cardContainer" class="is-flex is-flex-direction-column">
         <img class="card"
             src="https://images.pexels.com/photos/3418068/pexels-photo-3418068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             value=1>

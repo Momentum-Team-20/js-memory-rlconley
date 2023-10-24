@@ -1,8 +1,9 @@
-* {
-    background-color: aqua;
-}
 
 .card {
     width: 25%;
     height: auto;
+}
+.is-size-2 {
+    color: black;
+    font-size: x-small!important;
 }
