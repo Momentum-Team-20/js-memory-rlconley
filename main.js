@@ -6,14 +6,16 @@ let backOfCardSrc = "https://images.pexels.com/photos/3418068/pexels-photo-34180
 let resetButton = document.querySelector("#reset")
 let cardContainer = document.querySelector('#cardContainer')
 
-resetButton.addEventListener('click', (event) => {
-    let allCards = document.querySelectorAll(".llama")
-    console.log("clicked!")
-    console.log("allCards", allCards)
-    for (let card of allCards) {
-        resetCard(card)
+function buildReset() {
+    resetButton.addEventListener('click', (event) => {
+        let allCards = document.querySelectorAll(".llama")
+        console.log("clicked!")
+        console.log("allCards", allCards)
+        for (let card of allCards) {
+            resetCard(card)
+        }
+    })
 }
-})
 
 /* <img class="card m-2" data-card-front=<imgSrc>
 src=backOfCardSrc
@@ -38,7 +40,7 @@ function buildAllCards(cardInfoArray) {
         cardsArray.push(newCard)
         let newCardMatch = buildCard(cardInfo)
         value += 1
-        newCard.value = value
+        newCardMatch.value = value
         cardsArray.push(newCardMatch)
     }
     // as we build the cards, we put them in an array for other functions to use
@@ -50,7 +52,7 @@ function flipCard (cards) {
     console.log('flipCard function is running, you better go catch it')
     for (let card of cards) {
         card.addEventListener('click', (event) => {
-            console.log("clicked!")
+            console.log("card value:", card.value)
             console.log(card.src)
             card.src = card.dataset.cardFront;
             console.log(card.src)
@@ -81,9 +83,9 @@ for (let option of menuOptions) {
 }
 
 
-
 startMenu(allMenuChoices)
-let cardsArray = buildAllCards(cardInfoArray)
-flipCard(cardsArray)
-// flipCard(buildAllCards(cardInfoArray))
-// line 78 is the same as lines 76 and 77
+// let cardsArray = buildAllCards(cardInfoArray)
+// flipCard(cardsArray)
+flipCard(buildAllCards(cardInfoArray))
+buildReset()
+// line 90 is the same as lines 87 and 88
